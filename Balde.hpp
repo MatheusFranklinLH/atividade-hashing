@@ -1,3 +1,6 @@
+#ifndef BALDE_H_INCLUDED
+#define BALDE_H_INCLUDED
+
 #include <string>
 #include <vector>
 #include <iostream>
@@ -24,3 +27,5 @@ class Balde
         float getFatorCarga();
         int getNumPseudochaves();
 };
+
+#endif

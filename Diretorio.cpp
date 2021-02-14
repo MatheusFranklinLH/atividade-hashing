@@ -1,4 +1,4 @@
-#include "Diretorio.h"
+#include "Diretorio.hpp"
 
 Diretorio::Diretorio(int m, int p)
 {
@@ -24,7 +24,7 @@ bool Diretorio::insere(std::string pseudochave, bool reinsercao)
     std::string bits_esquerda = pseudochave.substr(0,p_global); //Obtem os d bits mais a esquerda da pseudochave
     int idx_dir = std::stoi(bits_esquerda, nullptr, 2); //Obtem o indice do balde onde alocar a pseudochave
 
-   if(baldes[idx_dir]->insere(pseudochave)) //Testa se o balde está cheio
+   if(baldes[idx_dir]->insere(pseudochave)) //Testa se o balde estÃ¡ cheio
    {
        if(!reinsercao) n_pseudochaves++;
        //std::cout << "Inserindo chave " << pseudochave << " no diretorio " << idx_dir << " ! profundidade global: " << p_global
@@ -123,7 +123,7 @@ std::string Diretorio::toBinary(int n, int b)
 
     if (aux.size() > b)
     {
-        std::cout << "Número invalido" <<std::endl;
+        std::cout << "NÃºmero invalido" <<std::endl;
         return "erro";
     }
     for(int i = 0; i < b - aux.size(); i++)

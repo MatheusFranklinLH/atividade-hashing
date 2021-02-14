@@ -1,5 +1,5 @@
 #include <iostream>
-#include "Diretorio.h"
+#include "Diretorio.cpp"
 #include <string>
 #include <vector>
 #include <cstdlib>
@@ -19,7 +19,7 @@ std::string toBinaryString(int n, int b)
 
     if (aux.size() > b)
     {
-        cout << "Número invalido" <<endl;
+        cout << "NÃºmero invalido" <<endl;
         return "erro";
     }
     for(int i = 0; i < b - aux.size(); i++)
@@ -43,7 +43,7 @@ void inserePseudochavesAleatorias(int n, int b, Diretorio* d, int k)
 
     for(int i=0; i < n; i++){
         rand_num = rand()% (1<<b);
-        if(k) rand_num = rand_num / (1<<(b/2)); //Se k for 1, divide o número gerado por 2^(b/2) tornando a primeira metade dos bits iguais a 0
+        if(k) rand_num = rand_num / (1<<(b/2)); //Se k for 1, divide o nÃºmero gerado por 2^(b/2) tornando a primeira metade dos bits iguais a 0
         d->insere(toBinaryString(rand_num, b), false);
     }
 }
@@ -69,12 +69,12 @@ int main()
     if(k!=0 && k!= 1 && k!=2)
     {
         k=0;
-        cout << "Número inválido - inserindo pseudochaves aleatorias" << endl;
+        cout << "NÃºmero invÃ¡lido - inserindo pseudochaves aleatorias" << endl;
     }
 
     if(m <= 0 || b <=0 || n<0)
     {
-        cout << "Erro - Número invalido!" << endl;
+        cout << "Erro - NÃºmero invalido!" << endl;
         return 0;
     }
 

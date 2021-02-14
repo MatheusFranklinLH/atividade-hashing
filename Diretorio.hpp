@@ -1,7 +1,10 @@
+#ifndef DIRETORIO_H_INCLUDED
+#define DIRETORIO_H_INCLUDED
+
 #include <string>
 #include <vector>
 #include <iostream>
-#include "Balde.h"
+#include "Balde.cpp"
 
 class Diretorio
 {
@@ -24,3 +27,5 @@ public:
     void info();
 
 };
+
+#endif
